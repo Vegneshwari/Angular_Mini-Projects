@@ -1,0 +1,54 @@
+Day 42
+------
+CRUD APPLICATION
+----------------
+
+
+HttpClient supports to
+----------------------
+
+POST for Create
+
+GET for Read
+
+PUT for replacing exisiting data
+
+PATCH for Update or modifying exisiting data
+
+DELETE for Delete
+
+
+
+install json fake serve------npm install -g json-server
+
+create a fake data in the json format
+
+initiliase the server-------json-server --watch db.json
+
+
+
+pre-defined methods in reactive forms module
+--------------------------------------------
+
+FormGroup / FormControl Predefined Methods
+
+🔹 1. Value & Status Management
+
+setValue(value)-----	Sets all fields strictly (must match the structure of the form)
+patchValue(value)----  Sets some or all fields (flexible structure)
+reset(value?)-------	Resets form to initial or specified state
+get(path)-------	Gets a child FormControl, FormGroup, or FormArray
+updateValueAndValidity()------	Manually recalculates value and validation
+
+🔹 2. State Marking Methods
+
+markAsTouched()-------	Marks the control as touched
+markAsUntouched()-------	Marks the control as untouched
+markAsDirty()--------	Marks the control as dirty (modified)
+markAsPristine()----------	Marks the control as pristine (unmodified)
+markAllAsTouched()-------	Marks all child controls as touched (useful for showing errors on submit)
+
+🔹 3. Enable / Disable Controls
+
+disable()--------	Disables the control
+enable()---------	Enables the control

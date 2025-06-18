@@ -1,0 +1,125 @@
+HTTP client module
+------------------
+
+To communicate with back-end server
+
+search as --------->{json fake api}
+
+{
+    HttpClientModule is the Angular module you import once to enable HTTP communication.
+    while HttpClient is the service you inject into components or services to actually make HTTP requests
+}
+
+set up the environment to work on the HTTP Client module
+--------------------------------------------------------
+
+older version, 
+
+1. include "HttpClientModule" as an argument in the providers in the "config.ts" file. Use "importProvidersFrom(HttpClientModule)" like below
+|
+|
+|
+export const appConfig: ApplicationConfig = {
+  providers: [provideRouter(routes), 
+    importProvidersFrom(HttpClientModule)
+  ]
+};
+
+or the new version is, 
+
+1. import "provideHttpClient()" to the providers in the config.ts file
+
+
+
+2. import "httpclient" in the component you want to use in and initialize in the constructor
+
+
+
+
+{
+
+we give service as an argument in the providers, it accepted, but here in the HttpClientModule, it has to be given like "importProvidersFrom(HttpClientModule). 
+Because service is like a class that can be imported in the providers directly and use it, Angular will accept it. 
+But, HttpClientModule is not a service, but an "NgModule" that contains providers for internal services like _httpclient, httpclient, httphandler.....
+
+}
+
+~import "FormsModule" to use form
+
+
+
+`Observable - (“A stream of data you can subscribe to and react when the data arrives”)
+-----------
+
+An Observable is a feature provided by RxJS that allows you to handle asynchronous operations — like API calls, event handling.......
+
+In Angular services, Observable is commonly used to,
+
+1. Fetch data from APIs using HttpClient
+
+2. Share or broadcast data between components
+
+3. React to user or system events asynchronously
+
+
+
+
+params: {
+  action: 'query',
+  format: 'json',
+  list: 'search',
+  utf8: '1',
+  srsearch: term,
+  origin: '*'
+}
+|
+|
+|
+
+1. action: 'query'
+  Tells the Wikipedia API what kind of action to perform.
+
+  query is used to retrieve data (like searching articles or reading content).
+
+2. format: 'json'
+  Specifies the response format.
+     
+  You're telling the API: "Send the result back in JSON format" (which Angular can easily parse).
+
+3. list: 'search'
+  You're asking for a search result list.
+
+  This tells the API you want a list of articles that match the search term.
+
+4. utf8: '1'
+   Ensures that the search string is interpreted as UTF-8.
+
+  It supports special characters, accents, and different languages correctly.
+
+5. srsearch: term
+ term is the actual search keyword entered by the user.
+
+  srsearch means “Search Request Search term.”
+
+6. origin: '*'
+  This is required to handle CORS (Cross-Origin Resource Sharing) in browsers.
+
+
+
+
+
+
+
+
+  Common Asynchronous Operations in JavaScript/Angular:
+HTTP requests (e.g., using HttpClient.get())
+
+setTimeout / setInterval
+
+Promises and Observables
+
+File reading
+
+Database calls
+
+User events (clicks, keypresses) in some cases

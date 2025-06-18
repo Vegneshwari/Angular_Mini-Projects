@@ -1,0 +1,14 @@
+Angular Reactive Form
+---------------------
+
+1. import "ReactiveFormModule" in the module file
+2. import "FormGroup,FormControl,FormBuilder, Validators" in component file
+3. implement ngOnInit function to do logics in it
+4. assign [formGroup]="referenceVariable of FormGroup from component file"
+5. novalidate
+6. (ngSubmit)="submitfunction()"
+7. AbstractControl- a seperate service that functions all the formgroup's properties efficiently
+8. import that "AbstractControl" class into the component.ts file
+
+
+
