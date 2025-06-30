@@ -11,6 +11,8 @@ Projects Included
 4. Angular Pipe
 5. Form Array
 6. HTTP client module
+7. Portfolio
+8. E-commerce app using routing. I yet to complete this project, but i have covered all the topics at routing and practiced on too. 
 
 One more project is on the pipeline; let me finish it off and upload that too.
 
