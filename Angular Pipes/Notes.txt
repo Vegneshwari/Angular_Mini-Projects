@@ -16,6 +16,26 @@ Built-in pipes
 3.currency
 4.decimal
 
+Common Built-in Pipes in Angular:
+---------------------------------
+
+| Pipe Name    | Purpose                                         | Example                           |                       |
+| ------------ | ----------------------------------------------- | --------------------------------- | --------------------- |
+| `uppercase`  | Converts text to uppercase                      | `"hello" → "HELLO"`               |                       |
+| `lowercase`  | Converts text to lowercase                      | `"HELLO" → "hello"`               |                       |
+| `titlecase`  | Converts to Title Case                          | `"hello world" → "Hello World"`   |                       |
+| `date`       | Formats date values                             | \`{{ today                        | date:'shortDate' }}\` |
+| `currency`   | Formats numbers as currency                     | `1000 → ₹1,000.00`                |                       |
+| `percent`    | Converts to percentage format                   | `0.25 → 25%`                      |                       |
+| `number`     | Formats a number                                | `12345.6789 → 12,345.679`         |                       |
+| `json`       | Converts object to JSON string                  | `{name: 'A'} → `{"name":"A"}\`    |                       |
+| `slice`      | Returns a subset of string/array                | `slice:1:4 → 2nd to 4th items`    |                       |
+| `async`      | Used with `Observable` or `Promise`             | Auto-subscribes and displays data |                       |
+| `i18nSelect` | Translates based on a value                     | Gender-based translations         |                       |
+| `i18nPlural` | Pluralizes based on a number                    | For localization                  |                       |
+| `keyvalue`   | Transforms object into iterable key-value pairs | Used with `*ngFor`                |                       |
+
+
 Custom pipes
 ------------
 

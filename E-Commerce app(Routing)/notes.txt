@@ -1,0 +1,10 @@
+
+
+
+
+
+service--->ng g s service_name
+once created, integrate the api. so import "provideHttpClient()" and "formsmodule" in the app.config.ts
+
+
+

@@ -1,0 +1,162 @@
+*{
+    user-select: none;
+}
+
+.body{
+    display: flex;
+    gap: 5rem;
+}
+
+@media screen and (max-width: 600px) {
+
+  .body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .body .rotate{
+    margin: auto;
+    padding-top: 30%;
+  }
+  
+}
+
+.body .btn{
+  transition: all 0.3s ease-in;
+}
+
+.body .btn:hover{
+
+  background-color: white;
+  border: 1px solid #201f20;
+  color: black;
+  transform: translateY(-20%);
+}
+
+.image-with-role{
+  max-width: 30%;
+}
+
+img{
+    height: 40rem;
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 10%;
+    animation: glitter 1s infinite alternate;
+}
+
+@media screen and (max-width: 600px) {
+
+  .body{
+    width: 100%;
+  }
+
+  .body img{
+    height: 20rem;
+    
+  }
+
+  .contents{
+    text-align: start;
+    justify-content: stretch;
+    margin: 0 auto;
+  }
+  
+}
+
+@keyframes glitter {
+  0% {
+    box-shadow: 0 0 10px #201f20, 0 0 20px #8b838a, 0 0 30px #ff00cc;
+  }
+  50% {
+    box-shadow: 0 0 20px #6b6345, 0 0 30px #a79b6c, 0 0 40px #b19b43;
+  }
+  100% {
+    box-shadow: 0 0 10px #374e4e, 0 0 20px #437272, 0 0 30px #368888;
+  }
+}
+
+.contents{
+    max-width: 35%;
+    text-align: stretch;
+    margin: 2rem;
+
+}
+
+.contents h1{
+    font-size: 4rem;
+    font-weight: bolder;
+   
+}
+
+.contents p{
+        font-weight:500;
+}
+
+.resume{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.resume .btn{
+    background-color: black;
+    color: white;
+}
+
+
+.rotate h3{
+    width: 5%;
+    height: 50%;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.rotate {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100%;
+  margin-top: 5rem;
+  
+}
+
+.rotate svg {
+  position: absolute;
+  animation: rotateme 10s linear infinite;
+  font-weight:500;
+}
+
+.rotate h3 {
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  /* z-index: 1; */
+}
+
+@keyframes rotateme {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+

@@ -1,0 +1,41 @@
+*{
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.projects h1{
+    text-align: center;
+    padding: 2rem;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+
+}
+
+
+.card img{
+
+    width: 100%;
+    height: auto;
+    margin: 0;
+    display: block;
+    padding: 1rem;
+
+}
+
+.card > div{
+
+    box-shadow: 1px 2px 8px 3px rgba(0,0,0,0.2);
+    max-width: 20rem;
+    margin: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+

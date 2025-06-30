@@ -1,0 +1,74 @@
+.about h4{
+    font-weight: bolder;
+    font-size: 15rem;
+    justify-content: center;
+    text-align: center;
+    overflow-wrap: break-word;
+    text-shadow: 10px 13px rgba(0, 0, 0, 0.2);
+}
+
+.about{
+    position: relative;
+}
+
+
+.about .key-icon{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    border: none;
+    border-radius: 50px;
+    background-color: white;
+    opacity: 0.5;
+    width: 3rem;
+    text-align: center;
+}
+
+/*mobile*/
+@media screen and (max-width: 800px) {
+    
+.about .key-icon{
+    position: absolute;
+    top: 64%;
+    right: 20%;
+}
+}
+
+/*tablet*/
+@media screen and (max-width: 1024px) {
+
+.about .key-icon{
+    position: absolute;
+    top: 66%;
+    right: 15%;
+}
+    
+}
+
+.about p{
+    margin-top: 10%;
+    background-color: blueviolet;
+    padding: 2rem;
+    color: white;
+    border-radius: 20px;
+}
+
+.about span{
+    font-size: xx-large;
+    font-weight: bo;
+}
+
+.date{
+    display: flex;
+    justify-content: center;    
+    height: 28px;
+}
+
+.date .full-date{
+    margin-left: 10px;
+    margin-bottom: 2px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

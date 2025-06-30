@@ -1,0 +1,27 @@
+
+ <header>
+        <h2>Exclusive Products</h2>
+
+         <div class="top">
+        <h6>New Arrival</h6>
+        <h6>Best Sellers</h6>
+        <h6>Featured</h6>
+        <h6>Special Offer</h6>
+    </div>
+
+</header>
+
+<div class="card-container mt-5 mb-5" >
+
+        <div class="card" *ngFor = "let Products of productList">
+        <img [src]="Products.image" width="300" height="300" alt="Product image"  class="image p-3" loading="lazy" />
+        <h3 style="max-width: 200px; padding-bottom: 10px;">{{Products.title}}</h3>
+        <div class="prices"> <p class="price discounted"> ${{Products.price}} </p> <p class="price original">${{Products.price+10 | number:'1.2-2'}}</p> <p class="offer"> 10% Off </p>  </div> 
+        <p class="description">{{Products.description}}</p>
+
+        <p><button (click)="addedToCart(Products.id)">Add to Cart</button></p>
+        </div>
+
+</div>
+
+<router-outlet></router-outlet>
