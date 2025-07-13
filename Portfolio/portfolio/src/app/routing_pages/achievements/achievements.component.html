@@ -1,4 +1,37 @@
-<p>achievements works!</p>
+
+<div class="container-fluid p-3 mt-3">
+
+    <h3>Achievement begins with the decision to try!</h3>
+
+    <div class="center_body">
+        
+      
+
+        <div *ngIf="images[currentSlideIndex]">
+            
+            <img class="slide-image" [src]="images[currentSlideIndex].src" alt="Slide {{currentSlideIndex +1}}" [class.slide-left]="direction==='right'" [class.slide-right]="direction==='left'" (animationend)="setDirection()">
+            <h3 class="slide-caption" [class.slide-left]="direction==='right'" [class.slide-right]="direction==='left'" > {{images[currentSlideIndex].caption}} </h3>
+        </div>
+
+        <a class="prev" (click)="prevSlide()">&#10094;</a>
+        <a class="next" (click)="nextSlide()">&#10095;</a>
+
+        
+
+          <!--1.--- <div *ngFor="let image of images; let i=index" [ngClass]="{'active': i === currentSlideIndex}">
+            <img [src]="image" alt="Slide {{i+1}}">
+        </div> -->
+
+        
+        <!--2.-- <div class="dots">
+            <span class="dot" *ngFor="let image of images; let i = index" [ngClass]="{'active': i === currentSlideIndex }" (click)="goToSlide(i)"></span>
+        </div> -->
+
+        
+
+    </div>
+
+</div>
 
 
 

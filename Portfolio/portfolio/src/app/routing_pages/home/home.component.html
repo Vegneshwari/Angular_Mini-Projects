@@ -1,6 +1,9 @@
 
+   <ng-particles [id]="'tsparticles'" [options]="particlesOptions" [particlesInit]="particlesInit" (particlesLoaded)="particlesLoaded($event)"></ng-particles>
+
 
 <section>
+
   <div class="container-fluid mt-3 p-3">
 
     <div class="body">
@@ -9,12 +12,12 @@
 
                  <img src="assets/photo.png" alt="Photo copy">
 
-                 <svg viewBox="0 0 200 200" width="200" height="200">
+                <svg viewBox="0 0 200 200" width="200" height="230">
                         <defs>
-                          <path id="circlePath" d="M25,100 a75,75 0 0,0 150,0" />
+                          <path id="circlePath1" d="M35,180 a90,75 0 0,0 150,0" />
                         </defs>
                         <text font-size="18" fill="black">
-                          <textPath xlink:href="#circlePath" starOffset="50%">
+                          <textPath xlink:href="#circlePath1" starOffset="50%">
                            Front-End Developer
                           </textPath>
                         </text>
@@ -29,8 +32,8 @@
               <div class="resume">
 
                 <a class="btn" href="assets/Vegneshwari_FED.pdf" target="_blank">Resume <i class="fa fa-external-link ps-2" ></i> </a>
-                <a href=""> <h4>Contacts</h4>  </a>
-                <!-- <a href="#projects"><i class="fa fa-angle-down fa-2x"></i></a> -->
+                <a href="https://wa.me/+918807353491" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon" ></i>  </a>
+                <a href="mailto:vickyvanitha24@gmail.com?subject=Hello&body=I wanted to reach out to you." target="_blank"> <i class="fa fa-envelope mail-icon"></i> </a>
 
               </div>
 
@@ -39,11 +42,11 @@
 
                       <svg viewBox="0 0 200 200" width="200" height="200">
                         <defs>
-                          <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
+                          <path id="circlePath2" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
                         </defs>
-                        <text font-size="18" fill="black">
-                          <textPath xlink:href="#circlePath">
-                            WEB DEVELOPER  .  WEB DEVELOPER  .  WEB DEVELOPER  .
+                        <text font-size="14" fill="black">
+                          <textPath xlink:href="#circlePath2">
+                            WEB DEVELOPER  .  WEB DEVELOPER 
                           </textPath>
                         </text>
                       </svg>

@@ -2,9 +2,26 @@
     user-select: none;
 }
 
+:host{
+  position: relative;
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+}
+
+ng-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 .body{
     display: flex;
     gap: 5rem;
+    justify-content: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -14,11 +31,21 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
+    max-width:fit-content;
   }
 
   .body .rotate{
-    margin: auto;
-    padding-top: 30%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+
+  .contents{
+    text-align:left;
+    justify-content: flex-start;
+    margin: 0 auto;
   }
   
 }
@@ -36,8 +63,44 @@
 }
 
 .image-with-role{
+
   max-width: 30%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
+
+.image-with-role svg{
+  position: absolute;
+  top: 70%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 80%; 
+  height: auto;
+}
+
+/*medium screen-portrait---only working*/
+@media (max-width: 600px) {
+
+  .image-with-role img{
+    height: 40vh;
+    width: auto;
+  }
+
+   .image-with-role svg{
+    width: 25vh;
+    top: 30vh;
+}
+
+  .image-with-role svg textPath{
+    font-weight: bolder;
+    font-size: 17px;
+  }
+}
+
+
 
 img{
     height: 40rem;
@@ -47,24 +110,7 @@ img{
     animation: glitter 1s infinite alternate;
 }
 
-@media screen and (max-width: 600px) {
 
-  .body{
-    width: 100%;
-  }
-
-  .body img{
-    height: 20rem;
-    
-  }
-
-  .contents{
-    text-align: start;
-    justify-content: stretch;
-    margin: 0 auto;
-  }
-  
-}
 
 @keyframes glitter {
   0% {
@@ -101,11 +147,31 @@ img{
     flex-wrap: wrap;
     justify-content: center;
     gap: 3rem;
+    align-items: center;
+    padding: 1rem;
 }
 
 .resume .btn{
     background-color: black;
     color: white;
+}
+
+.whatsapp-icon, .mail-icon{
+  color: white;
+  padding: 0.5rem;
+  font-size:x-large;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: green;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 14px 8px rgb(161, 159, 159);
+}
+
+.whatsapp-icon:hover, .mail-icon:hover{
+  transform: translateY(-20%);
+  background-color: white;
+  border: 1px solid black;
+  color: green;
 }
 
 
